@@ -39,7 +39,8 @@ internal static class BinaryWriterExtensions
     internal static void Write(this BinaryWriter writer, Rectangle value)
     {
         writer.Write(value.Location);
-        writer.Write(value.Size);
+        // TODO: NOT FIXED!
+        // writer.Write(value.Size);
     }
 
     internal static void Write(this BinaryWriter writer, Point value)

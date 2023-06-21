@@ -362,7 +362,7 @@ public sealed class Tileset
     /// </returns>
     public static Tileset FromRaw(GraphicsDevice device, RawTileset rawTileset)
     {
-        Texture2D texture = new(device, rawTileset.RawTexture.Width, rawTileset.RawTexture.Height, mipmap: false, SurfaceFormat.Color);
+        Texture2D texture = new(device, rawTileset.RawTexture.Width, rawTileset.RawTexture.Height);
         texture.SetData<Color>(rawTileset.RawTexture.Pixels.ToArray());
         texture.Name = rawTileset.RawTexture.Name;
         return new(rawTileset.Name, texture, rawTileset.TileWidth, rawTileset.TileHeight);

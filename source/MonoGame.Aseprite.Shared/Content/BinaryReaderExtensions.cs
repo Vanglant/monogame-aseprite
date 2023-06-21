@@ -48,7 +48,9 @@ internal static class BinaryReaderExtensions
     {
         Rectangle result = new();
         result.Location = ReadPoint(reader);
-        result.Size = ReadPoint(reader);
+        var point = ReadPoint(reader);
+        result.X = point.X;
+        result.Y = point.Y;
         return result;
     }
 

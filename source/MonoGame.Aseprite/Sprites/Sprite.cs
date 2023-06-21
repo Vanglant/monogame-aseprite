@@ -325,7 +325,7 @@ public class Sprite
     {
         RawTexture rawTexture = rawSprite.RawTexture;
 
-        Texture2D texture = new(device, rawTexture.Width, rawTexture.Height, mipmap: false, SurfaceFormat.Color);
+        Texture2D texture = new(device, rawTexture.Width, rawTexture.Height);
         texture.Name = rawTexture.Name;
         texture.SetData<Color>(rawTexture.Pixels.ToArray());
 

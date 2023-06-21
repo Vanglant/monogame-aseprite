@@ -48,13 +48,6 @@
         <None Include="..\MonoGame.Aseprite.Content.Pipeline\bin\$(Configuration)\net6.0\Monogame.Aseprite.Content.Pipeline.dll" Pack="true" PackagePath="content" />
     </ItemGroup>
 
-    <!-- Nuget Package References -->
-    <ItemGroup>
-        <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303">
-            <PrivateAssets>All</PrivateAssets>
-        </PackageReference>
-    </ItemGroup>
-
     <!-- Allow the test project to use internal types for testing -->
     <ItemGroup>
         <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
@@ -78,5 +71,8 @@
     <!-- Compile include code files from shared directory -->
     <ItemGroup>
         <Compile Include="../MonoGame.Aseprite.Shared/**/*.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\FNA\FNA.Core.csproj" />
     </ItemGroup>
 </Project>

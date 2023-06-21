@@ -185,7 +185,7 @@ public sealed class AnimatedTilemap : IEnumerable<AnimatedTilemapFrame>
     public void Update(double deltaTimeInSeconds)
     {
         GameTime fakeGameTime = new();
-        fakeGameTime.ElapsedGameTime = TimeSpan.FromSeconds(deltaTimeInSeconds);
+        // fakeGameTime.ElapsedGameTime = TimeSpan.FromSeconds(deltaTimeInSeconds);
         Update(fakeGameTime);
     }
 
